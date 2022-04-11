@@ -84,7 +84,7 @@ function App() {
     if (number !==0) { // if the division number is not zerp
       setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
     } else {
-      setRunningTotal ('Cannot divide by zero')
+      setRunningTotal ('Cannot divide by zero');
     }
     
   }
