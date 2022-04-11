@@ -64,7 +64,7 @@ it('should be able to divide by zero', () => {
   cy.get('#operator-divide').click();
   cy.get('#number0').click();
   cy.get('#operator-equals').click(); // Returns the value infinity
-  cy.get('.display').should('contain' , '') 
+  cy.get('.display').should('contain' , 'Cannot divide by zero') 
 });
 
 })
