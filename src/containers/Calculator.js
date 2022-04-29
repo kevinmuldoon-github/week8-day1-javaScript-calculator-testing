@@ -86,7 +86,7 @@ function App() {
     } else {
       setRunningTotal ('Cannot divide by zero');
     }
-    
+  
   }
 
 

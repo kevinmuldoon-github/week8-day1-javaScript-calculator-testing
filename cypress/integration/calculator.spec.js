@@ -3,9 +3,27 @@ describe("Calculator", () => {
     cy.visit("http://localhost:3000");
   })
 
-  it('should have working number buttons', () => {
+  it('should display the running total when number buttons are clicked', () => {
+    cy.get('#number1').click();
+    cy.get('.display').should('contain', '1')
     cy.get('#number2').click();
-    cy.get('.display').should('contain', '2')
+    cy.get('.display').should('contain', '12')
+    cy.get('#number3').click();
+    cy.get('.display').should('contain', '123')
+    cy.get('#number4').click();
+    cy.get('.display').should('contain', '1234')
+    cy.get('#number5').click();
+    cy.get('.display').should('contain', '12345')
+    cy.get('#number6').click();
+    cy.get('.display').should('contain', '123456')
+    cy.get('#number7').click();
+    cy.get('.display').should('contain', '1234567')
+    cy.get('#number8').click();
+    cy.get('.display').should('contain', '12345678')
+    cy.get('#number9').click();
+    cy.get('.display').should('contain', '123456789')
+    cy.get('#number0').click();
+    cy.get('.display').should('contain', '1234567890')
   })
 
 it('should update the display with the result of the operation', () => {
